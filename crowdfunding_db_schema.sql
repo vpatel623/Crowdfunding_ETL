@@ -1,4 +1,10 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+﻿DROP TABLE IF EXISTS "Campaign";
+DROP TABLE IF EXISTS "Contacts";
+DROP TABLE IF EXISTS "Category";
+DROP TABLE IF EXISTS "Subcategory";
+
+
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/1Zv5BC
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
@@ -57,4 +63,9 @@ REFERENCES `Category` (`category_id`);
 
 ALTER TABLE `Campaign` ADD CONSTRAINT `fk_Campaign_subcatergory_id` FOREIGN KEY(`subcatergory_id`)
 REFERENCES `Subcategory` (`subcategory_id`);
+
+select * FROM Category
+select * FROM Subcategory
+select * FROM Campaign
+select * FROM Contacts 
 
